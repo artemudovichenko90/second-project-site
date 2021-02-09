@@ -1,9 +1,10 @@
-h1, h2, h3, body, p, ul {
+h1, h2, h3, body, p, ul, article {
     margin: 0;
+    padding: 0;
 }
 
-ul {
-    padding: 0;
+img {
+    display: block;
 }
 
 body {
@@ -16,22 +17,29 @@ body {
 
 header {
     color: #fff;
-    display: block;
+    position: relative;
 }
 
+header article {
+    padding: 100px 260px 139px;
+}
 
-.content-welcome {
-    width: 820px;
-    height: 450px;
-    margin: auto;
+header article h1 {
+    font-size: 2em;
+}
+
+header article p {
+    padding: 18px 0 26px;
 }
 
 .bg-image {
     position: absolute;
     background: url(https://static.pexels.com/photos/248515/pexels-photo-248515.png) center;
     background-size: cover;
-    width: 100%;
-    height: 450px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     z-index: -1;
     opacity: 0.4;
 }
@@ -39,108 +47,121 @@ header {
 .btn {
     display: inline-block;
     padding: 1em 2em;
-    background: #333;
     text-decoration: none;
-    color: #fff;
+    color: inherit;
+    background-color: #333; /*<background-color: initial не работает*/
     border: 1px solid #666;
-    margin: 8px 0 8px;
     cursor: pointer;
 }
+
 
 a:hover {
     color: #333;
     background-color: #fff;
 }
 
-h1 {
-    padding-top: 100px;
-}
-
-p {
-    padding: 17px 0 17px;
-}
-
 .section-a {
     background-color: #eaeaea;
-    height: 187px;
-    padding-bottom: 35px;
+    padding: 0 254px 53px 254px;
     color: #333;
 }
 
-h2 {
-    padding: 26px 0 26px;
+.section-a p {
+    column-count: 2;
 }
 
-.part1, .part2 {
-    width: 30%;
-    display: inline-block;
+.section-a h2 {
+    padding: 26px 0 27px;
 }
 
 .section-b {
-    padding: 35px 17px 17px;
-    height: 510px;
+    padding: 35px 17px 35px;
     color: #333;
 }
 
-ul li {
-    display: inline-block;
+.card {
+    width: 273px;
+    background-color: white;
 }
 
-.card {
-    width: 272px;
-    background-color: white;
-    margin: 0 8px;
+.section-b img {
+    height: 180px;
+    width: inherit;
+    object-fit: cover;
+    object-position: center;
 }
+
 
 .card-content {
     padding: 26px;
 }
 
+.section-b li {
+    padding: 0 8px;
+    display: inline-block;
+    vertical-align: top;
+}
+
 .card h3 {
+    white-space: nowrap;
     padding: 20px 0 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
-.section-b div img {
-    width: 100%;
-    display: block;
-}
+/*.card p {*/
+/*    line-height: 1.5rem;*/
+/*    max-height: 9rem;*/
+/*    overflow: hidden;*/
+/*    text-overflow: ellipsis;*/
+/*}*/
 
-.section-b div p {
-    margin: auto;
+.card p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    margin: 17px 0 17px;
 }
 
 .section-c {
     background-color: #fff;
     color: #333333;
-    padding: 35px 0 35px;
+    padding: 61px 250px 52px;
 }
 
-.section-c p {
-    padding: 17px 0 17px;
-    width: 880px;
-    margin: auto;
+.section-c h2 {
+    padding-bottom: 43px;
 }
 
 .section-d {
-    color: white;
+    color: #fff;
+    font-size: 18px;
+    line-height: 26px;
 }
 
 .boxContact {
     background: #2690d4;
-}
-
-.boxContact {
-    width: 50.6%;
+    width: 50%;
+    height: 150%;
 }
 
 .boxAbout {
-    width: 49%;
+    width: 50%;
 }
 
 .boxAbout, .boxContact {
     box-sizing: border-box;
-    padding: 35px;
     display: inline-block;
+    vertical-align: top;
+    padding: 36px 35px;
+}
+
+.section-d h2 {
+    padding: 26px 0;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
 }
 
 footer {
@@ -158,4 +179,8 @@ footer > div {
 footer div a {
     text-decoration: none;
     color: #2690d4;
+}
+
+.section-d p {
+    padding: 18px 0;
 }
